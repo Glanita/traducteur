@@ -47,9 +47,10 @@ TARGET_LANGUAGES = {
     'en': '🇬🇧 English',
     'fr': '🇫🇷 Français',
     'es': '🇪🇸 Español',
+    'de': '🇩🇪 Deutsch',
 }
 
-LANG_FLAGS = {'en': '🇬🇧', 'fr': '🇫🇷', 'es': '🇪🇸'}
+LANG_FLAGS = {'en': '🇬🇧', 'fr': '🇫🇷', 'es': '🇪🇸', 'de': '🇩🇪'}
 
 class KeepAliveHandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -210,7 +211,7 @@ async def on_ready():
             logger.error(f"❌ Synch: {e}")
 
     await client.change_presence(
-        activity=discord.Activity(type=discord.ActivityType.watching, name="EN / FR / ES | /help")
+        activity=discord.Activity(type=discord.ActivityType.watching, name="EN / FR / ES / DE | /help")
     )
 
 
